@@ -41,7 +41,9 @@
     "e2e.ci": "gulp build.prod --color && gulp build.js.e2e --color && gulp e2e --color",
     "tests.all": "npm test && npm run e2e.ci",
     "webdriver-start": "node_modules/protractor/bin/webdriver-manager start",
-    "webdriver-update": "node_modules/protractor/bin/webdriver-manager update"
+    "webdriver-update": "node_modules/protractor/bin/webdriver-manager update",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Minko Gechev <mgechev>",
   "contributors": [
@@ -151,6 +153,8 @@
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.26",
-    "zone.js": "^0.6.12"
-  }
+    "zone.js": "^0.6.12",
+    "snyk": "^1.317.0"
+  },
+  "snyk": true
 }
